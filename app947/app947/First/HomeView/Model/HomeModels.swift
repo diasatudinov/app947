@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct HomeInfo {
+    let id = UUID()
+    var visited: Int
+    var newFriendships: Int
+    var newDishes: Int
+    var excursions: Int
+}

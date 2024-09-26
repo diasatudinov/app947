@@ -10,14 +10,18 @@ import SwiftUI
 struct PlaceCell: View {
     var body: some View {
         ZStack {
-            
             VStack {
-                
+                Text("asdasd")
             }
         }
+        .frame(height: 157)
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(Color.secondaryRed, lineWidth: 1)
+        )
     }
 }
 
 #Preview {
-    HomeCell()
+    PlaceCell()
 }
