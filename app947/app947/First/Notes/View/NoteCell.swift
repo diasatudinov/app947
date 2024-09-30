@@ -15,7 +15,7 @@ struct NoteCell: View {
     
     var body: some View {
         ZStack {
-            VStack(alignment: .leading, spacing: 10) {
+            VStack(alignment: .leading, spacing: 15) {
                 
                 if let image = note.image {
                     Image(uiImage: image)
@@ -56,7 +56,7 @@ struct NoteCell: View {
                         Button(action: {
                             // Действие для удаления
                             withAnimation {
-                               // viewModel.deletePlace(note)
+                                viewModel.deleteNote(note)
                             }
                         }) {
                             Label("Delete", systemImage: "trash")
@@ -84,7 +84,8 @@ struct NoteCell: View {
                         .font(.system(size: 15, weight: .regular))
                 }
                 Spacer()
-            }.padding()
+            }.padding(.horizontal)
+           
         }
         .frame(height: 385)
         .background(Color.black.opacity(0.05))
