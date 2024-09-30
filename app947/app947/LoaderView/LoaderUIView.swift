@@ -45,7 +45,7 @@ struct LoaderUIView: View {
             }
             
         } else {
-            if !true {
+            if true {
                 ReOnboardingUIView()
             } else {
                 Text("US")
