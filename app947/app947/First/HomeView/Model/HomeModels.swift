@@ -7,10 +7,18 @@
 
 import Foundation
 
-struct HomeInfo {
+struct HomeInfo: Codable {
     let id = UUID()
     var visited: Int
     var newFriendships: Int
     var newDishes: Int
     var excursions: Int
+}
+
+struct Place: Hashable, Codable {
+    let id = UUID()
+    var name: String
+    var grade: Double
+    var date: Date
+    var note: String
 }
