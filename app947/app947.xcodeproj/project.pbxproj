@@ -19,6 +19,8 @@
 		2B60B06B2CA5593B00D8818D /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60B06A2CA5593B00D8818D /* HomeUIView.swift */; };
 		2B60B06D2CA559C200D8818D /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60B06C2CA559C200D8818D /* HomeModels.swift */; };
 		2B60B06F2CA55CEB00D8818D /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60B06E2CA55CEB00D8818D /* PlaceCell.swift */; };
+		2B6A04DE2CAC8077000E0484 /* SettingsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6A04DD2CAC8077000E0484 /* SettingsUIView.swift */; };
+		2B6A04E12CAC808B000E0484 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6A04E02CAC808B000E0484 /* SettingsViewModel.swift */; };
 		2BACF8232CA9DF240024C44E /* TabUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BACF8222CA9DF240024C44E /* TabUIView.swift */; };
 		2BACF8252CAAF1C00024C44E /* NotesUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BACF8242CAAF1C00024C44E /* NotesUIView.swift */; };
 		2BACF8272CAAF27D0024C44E /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BACF8262CAAF27D0024C44E /* NoteCell.swift */; };
@@ -41,6 +43,8 @@
 		2B60B06A2CA5593B00D8818D /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
 		2B60B06C2CA559C200D8818D /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
 		2B60B06E2CA55CEB00D8818D /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
+		2B6A04DD2CAC8077000E0484 /* SettingsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUIView.swift; sourceTree = "<group>"; };
+		2B6A04E02CAC808B000E0484 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		2BACF8222CA9DF240024C44E /* TabUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabUIView.swift; sourceTree = "<group>"; };
 		2BACF8242CAAF1C00024C44E /* NotesUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesUIView.swift; sourceTree = "<group>"; };
 		2BACF8262CAAF27D0024C44E /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		2B1F40622CA3FFDF00540B8F /* First */ = {
 			isa = PBXGroup;
 			children = (
+				2B6A04DB2CAC8064000E0484 /* Settings */,
 				2BACF8212CA9DF040024C44E /* TabView */,
 				2BACF81D2CA9DEA70024C44E /* Notes */,
 				2B60B0652CA5589C00D8818D /* HomeView */,
@@ -184,6 +189,31 @@
 				2B60B06C2CA559C200D8818D /* HomeModels.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2B6A04DB2CAC8064000E0484 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2B6A04DF2CAC807C000E0484 /* ViewModel */,
+				2B6A04DC2CAC806A000E0484 /* View */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		2B6A04DC2CAC806A000E0484 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B6A04DD2CAC8077000E0484 /* SettingsUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B6A04DF2CAC807C000E0484 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2B6A04E02CAC808B000E0484 /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2BACF81D2CA9DEA70024C44E /* Notes */ = {
@@ -320,6 +350,7 @@
 				2B1F40512CA3F55800540B8F /* ContentView.swift in Sources */,
 				2B1F40692CA4004C00540B8F /* UsOnboardingUIView.swift in Sources */,
 				2B408AA72CA5EA7700DF3B00 /* HomeViewModel.swift in Sources */,
+				2B6A04DE2CAC8077000E0484 /* SettingsUIView.swift in Sources */,
 				2BACF82B2CAAF32E0024C44E /* NoteViewModel.swift in Sources */,
 				2B60B06B2CA5593B00D8818D /* HomeUIView.swift in Sources */,
 				2B1F404F2CA3F55800540B8F /* app947App.swift in Sources */,
@@ -331,6 +362,7 @@
 				2BACF82F2CAB37540024C44E /* ImagePicker.swift in Sources */,
 				2B1F405E2CA3FDFD00540B8F /* LoaderUIView.swift in Sources */,
 				2BACF8232CA9DF240024C44E /* TabUIView.swift in Sources */,
+				2B6A04E12CAC808B000E0484 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
