@@ -24,6 +24,8 @@
 		2BA3F64D2CCB91C600B39110 /* EventsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA3F64C2CCB91C500B39110 /* EventsUIView.swift */; };
 		2BA3F64F2CCB99D500B39110 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA3F64E2CCB99D500B39110 /* Event.swift */; };
 		2BA3F6532CCB9B5800B39110 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA3F6522CCB9B5800B39110 /* EventCell.swift */; };
+		2BA3F6552CCBA89400B39110 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA3F6542CCBA89400B39110 /* Device.swift */; };
+		2BA3F6582CCBA8D800B39110 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA3F6572CCBA8D800B39110 /* WebView.swift */; };
 		2BACF8232CA9DF240024C44E /* TabUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BACF8222CA9DF240024C44E /* TabUIView.swift */; };
 		2BACF8252CAAF1C00024C44E /* NotesUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BACF8242CAAF1C00024C44E /* NotesUIView.swift */; };
 		2BACF8272CAAF27D0024C44E /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BACF8262CAAF27D0024C44E /* NoteCell.swift */; };
@@ -51,6 +53,8 @@
 		2BA3F64C2CCB91C500B39110 /* EventsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsUIView.swift; sourceTree = "<group>"; };
 		2BA3F64E2CCB99D500B39110 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		2BA3F6522CCB9B5800B39110 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		2BA3F6542CCBA89400B39110 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		2BA3F6572CCBA8D800B39110 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		2BACF8222CA9DF240024C44E /* TabUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabUIView.swift; sourceTree = "<group>"; };
 		2BACF8242CAAF1C00024C44E /* NotesUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesUIView.swift; sourceTree = "<group>"; };
 		2BACF8262CAAF27D0024C44E /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 		2B1F40632CA3FFE700540B8F /* Second */ = {
 			isa = PBXGroup;
 			children = (
+				2BA3F6562CCBA8CA00B39110 /* WebView */,
 				2B1F40672CA4001D00540B8F /* Onboarding */,
 			);
 			path = Second;
@@ -213,6 +218,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		2BA3F6562CCBA8CA00B39110 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				2BA3F6572CCBA8D800B39110 /* WebView.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		2BACF81D2CA9DEA70024C44E /* Notes */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				2BACF82D2CAB37460024C44E /* ImagePicker */,
+				2BA3F6542CCBA89400B39110 /* Device.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -347,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B60B06D2CA559C200D8818D /* HomeModels.swift in Sources */,
+				2BA3F6582CCBA8D800B39110 /* WebView.swift in Sources */,
 				2BACF8272CAAF27D0024C44E /* NoteCell.swift in Sources */,
 				2B1F40512CA3F55800540B8F /* ContentView.swift in Sources */,
 				2B1F40692CA4004C00540B8F /* UsOnboardingUIView.swift in Sources */,
@@ -357,6 +372,7 @@
 				2B60B06B2CA5593B00D8818D /* HomeUIView.swift in Sources */,
 				2B1F404F2CA3F55800540B8F /* app947App.swift in Sources */,
 				2BACF8252CAAF1C00024C44E /* NotesUIView.swift in Sources */,
+				2BA3F6552CCBA89400B39110 /* Device.swift in Sources */,
 				2BACF8292CAAF2A00024C44E /* Note.swift in Sources */,
 				2B1F40662CA4001700540B8F /* ReOnboardingUIView.swift in Sources */,
 				2BA3F6532CCB9B5800B39110 /* EventCell.swift in Sources */,
