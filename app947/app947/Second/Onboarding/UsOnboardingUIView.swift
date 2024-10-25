@@ -32,10 +32,11 @@ struct UsOnboardingUIView: View {
                             VStack {
                                 
                                 Image("firstScreen947")
-                                .resizable()
-                                    .frame(width: UIScreen.main.bounds.width)
+                                    .resizable()
                                     .scaledToFill()
+                                    .frame(width: UIScreen.main.bounds.width)
                                     .padding(.top, 120)
+                                    //.offset(y: 10)
                                 // .frame(width: UIScreen.main.bounds.width - 48)
                                 //.ignoresSafeArea(edges: .top)
                                 // .padding(.bottom, -100)
@@ -59,6 +60,7 @@ struct UsOnboardingUIView: View {
                             Rectangle()
                                 .foregroundColor(.mainRed)
                                 .cornerRadius(30)
+                                
                             VStack {
                                 switch pageNum {
                                 case 1:
@@ -130,6 +132,7 @@ struct UsOnboardingUIView: View {
                             
                             
                         }.edgesIgnoringSafeArea(.bottom)
+                            .offset(y: pageNum == 1 ? -173 : 0)
                     }
                     
                     

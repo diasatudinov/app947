@@ -15,10 +15,21 @@ class NoteViewModel: ObservableObject {
         }
     }
     
-    private let notesFileName = "notes.json"
+    @Published var events: [Story] = [
+    ] {
+        didSet {
+            savePlaces()
+        }
+    }
     
+    
+    private let notesFileName = "notes.json"
+    private let placesFileName = "categories.json"
+
     init() {
         loadNotes()
+        loadPlaces()
+
     }
     
     
@@ -31,7 +42,32 @@ class NoteViewModel: ObservableObject {
         return getDocumentsDirectory().appendingPathComponent(notesFileName)
     }
     
-   
+    private func placesFilePath() -> URL {
+        return getDocumentsDirectory().appendingPathComponent(placesFileName)
+    }
+    
+    private func savePlaces() {
+        DispatchQueue.global().async {
+            let encoder = JSONEncoder()
+            do {
+                let data = try encoder.encode(self.events)
+                try data.write(to: self.placesFilePath())
+            } catch {
+                print("Failed to save players: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    
+    private func loadPlaces() {
+        let decoder = JSONDecoder()
+        do {
+            let data = try Data(contentsOf: placesFilePath())
+            events = try decoder.decode([Story].self, from: data)
+        } catch {
+            print("Failed to load players: \(error.localizedDescription)")
+        }
+    }
     
     private func saveNotes() {
         DispatchQueue.global().async {
@@ -53,6 +89,30 @@ class NoteViewModel: ObservableObject {
             notes = try decoder.decode([Note].self, from: data)
         } catch {
             print("Failed to load players: \(error.localizedDescription)")
+        }
+    }
+    
+    func addStory(_ newStory: Story) {
+        events.append(newStory)
+    }
+    
+    func editStory(_ story: Story, newName: String, newNote: String) {
+        if let index = events.firstIndex(where: { $0.id == story.id }) {
+            events[index].name = newName
+            events[index].note = newNote
+        }
+    }
+    
+    // Функция для удаления истории
+    func removeStory(id: UUID) {
+        // Удаляем историю с указанным id
+        if let index = events.firstIndex(where: { $0.id == id }) {
+            events.remove(at: index)
+            
+            // Перенумеровываем оставшиеся истории
+            for i in 0..<events.count {
+                events[i].number = i + 1
+            }
         }
     }
     

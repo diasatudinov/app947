@@ -12,7 +12,9 @@ struct app947App: App {
     var body: some Scene {
         WindowGroup {
             //ContentView()
-            LoaderUIView()
+            NavigationView {
+                LoaderUIView()
+            }
         }
     }
 }

@@ -11,8 +11,9 @@ struct NotesUIView: View {
     @ObservedObject var viewModel: NoteViewModel
     @State var selectedNote: Note?
     
-    @State var addNote = false
-    @State var editNote = false
+    @State private var eventShow = false
+    @State private var addNote = false
+    @State private var editNote = false
     var body: some View {
         ZStack {
             
@@ -30,6 +31,25 @@ struct NotesUIView: View {
                     }
                 }.padding(.top, 40).padding(.bottom, 20)
                 
+                Button {
+                    withAnimation {
+                        eventShow = true
+                    }
+                } label: {
+                    ZStack {
+                        LinearGradient(gradient: Gradient(colors: [.eventGradTop, .eventGradBottom]),
+                                       startPoint: .top,
+                                       endPoint: .bottom)
+                        HStack {
+                            Text("Tiger Event")
+                                .font(.system(size: 28, weight: .bold))
+                                .italic()
+                                Image(systemName: "paperplane")
+                                .font(.system(size: 22, weight: .medium))
+                        }.foregroundColor(.white)
+                    }.frame(height: 66).cornerRadius(16).padding(.bottom, 20)
+                }
+                
                 ScrollView(showsIndicators: false) {
                     
                     ForEach( viewModel.notes, id: \.self) { note in
@@ -43,6 +63,16 @@ struct NotesUIView: View {
                 Spacer()
             }.padding(.horizontal)
             
+            if eventShow {
+                
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(Color.black.opacity(0.3)).ignoresSafeArea()
+                    
+                    EventUIView(eventShow: $eventShow, viewModel: viewModel)
+                        .transition(.move(edge: .bottom))
+                }
+            }
             
             if addNote {
                 ZStack {

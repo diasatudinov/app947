@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct Story: Hashable, Codable {
+    var id = UUID()
+    var number: Int
+    var name: String
+    var note: String
+}
